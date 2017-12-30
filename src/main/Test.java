@@ -40,10 +40,6 @@ public class Test {
 		System.out.println((System.currentTimeMillis() - start) / 1000d + "sec");
 
 	}
-	
-	private static ArrayList<FinalEntry> createFinalEntry(){
-		return new ArrayList<FinalEntry>();
-	}
 
 	public static float simulationAllLines(int year, boolean parsedLeagues)
 			throws InterruptedException, ExecutionException, IOException {

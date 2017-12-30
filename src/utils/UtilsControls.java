@@ -7,7 +7,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collection;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
@@ -299,11 +298,6 @@ class UtilsControls{
 				// System.out.println(curr.get(0).fixture.date + " " + "
 				// " + successes + " not loss: " + notlosses
 				// + " pr: " + (coeff != -1f ? (coeff - 1f) : coeff));
-				if (coeff != -1f)
-					winBets++;
-				else
-					loseBets++;
-
 				profit += (coeff != -1f ? (coeff - 1f) : coeff);
 			}
 			curr = new ArrayList<>();
