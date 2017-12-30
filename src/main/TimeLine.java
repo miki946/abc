@@ -11,6 +11,9 @@ import java.util.Date;
  */
 public class TimeLine extends Line {
 
+	/**
+     * This field is a variable of class TimeLine
+     */
 	public Date time;
 
 	public TimeLine(float line, float home, float away, Date time, String bookmaker) {

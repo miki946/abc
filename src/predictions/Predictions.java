@@ -23,7 +23,6 @@ import predictions.Predictions.OnlyTodayMatches;
 import runner.RunnerAsianPredictions;
 import runner.RunnerPredictions;
 import scraper.Scraper;
-import settings.Settings;
 import utils.Utils;
 import xls.XlSUtils;
 

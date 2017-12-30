@@ -12,13 +12,33 @@ import results.Results;
  */
 public class AsianEntry {
     /**
-     * This field sets the variable of class ExtendedFixture
+     * This field is a variable of class ExtendedFixture
      */
 	public ExtendedFixture fixture;
+	
+	/**
+    * This field is a variable of class ExtendedFixture
+    */
 	public boolean prediction;
+	
+	/**
+    * This field is a variable of class ExtendedFixture
+    */
 	public float line;
+	
+	/**
+	* This field is a variable of class ExtendedFixture
+	*/
 	public float home;
+	
+	/**
+	* This field is a variable of class ExtendedFixture
+	*/
 	public float away;
+	
+	/**
+	* This field is a variable of class ExtendedFixture
+	*/
 	public float expectancy;
 
 	public AsianEntry(ExtendedFixture fixture, boolean prediction, float line, float home, float away,

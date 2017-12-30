@@ -3,9 +3,6 @@ package utils;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
-
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-
 import entries.FinalEntry;
 import main.ExtendedFixture;
 import main.Result;

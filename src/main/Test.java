@@ -622,28 +622,28 @@ public class Test {
 	}
 
 	private static void controlFirstOptimalsByCompetition(HSSFWorkbook workbookdata, int year,
-			HashMap<String, ArrayList<Settings>> optimals) {
+			HashMap<String, ArrayList<Settings>> optimalsvar) {
 		Iterator<Sheet> sh = workbookdata.sheetIterator();
 		while (sh.hasNext()) {
 			HSSFSheet i = (HSSFSheet) sh.next();
 			Settings set = XlSUtils.predictionSettings(i, year);
-			if (optimals.get(i.getSheetName()) != null)
-				optimals.get(i.getSheetName()).add(set);
+			if (optimalsvar.get(i.getSheetName()) != null)
+				optimalsvar.get(i.getSheetName()).add(set);
 			else {
-				optimals.put(i.getSheetName(), new ArrayList<>());
-				optimals.get(i.getSheetName()).add(set);
+				optimalsvar.put(i.getSheetName(), new ArrayList<>());
+				optimalsvar.get(i.getSheetName()).add(set);
 			}
 		}
 	}
 	
 	private static void controlSecondOptimalsByCompetition(HSSFWorkbook workbookdata, int year,
-			HashMap<String, ArrayList<Settings>> optimals, ArrayList<String> dont, float total) {
+			HashMap<String, ArrayList<Settings>> optimalsvar, ArrayList<String> dont, float total) {
 		Iterator<Sheet> sh = workbookdata.sheetIterator();
 		while (sh.hasNext()) {
 			HSSFSheet i = (HSSFSheet) sh.next();
 			if (dont.contains(i.getSheetName()))
 				continue;
-			ArrayList<Settings> setts = optimals.get(i.getSheetName());
+			ArrayList<Settings> setts = optimalsvar.get(i.getSheetName());
 			Settings set = Utils.getSettings(setts, year - 1);
 			ArrayList<FinalEntry> fes = XlSUtils.runWithSettingsList(i, XlSUtils.selectAllAll(i), set);
 			float profit = Utils.getProfit(fes);
